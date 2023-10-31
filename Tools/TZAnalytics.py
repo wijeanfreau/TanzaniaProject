@@ -28,3 +28,15 @@ plt.ylabel('Density')
 plt.title('Density Plot of GPA by Gender')
 
 plt.show()
+
+##GRAPH GPA DENSITY BY YEAR
+plt.clf()
+data = df[['AGGT','Year']]
+sns.set_style('whitegrid')
+sns.kdeplot(data=data, x = 'AGGT', hue = 'Year', fill = True, common_norm=False)
+
+plt.xlabel('GPA')
+plt.ylabel('Density')
+plt.title('Density Plot of GPA by Year')
+
+plt.show()
